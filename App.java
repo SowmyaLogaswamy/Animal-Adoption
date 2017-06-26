@@ -4,9 +4,9 @@ public class App {
   public static void main(String[] args) {
     Console myConsole = System.console();
 
-    Animal puppy = new Animal(2, "Dog", "Spot");
-    Animal kitten = new Animal(7, "Cat", "Sam");
-    Animal snake = new Animal(15, "Reptile", "Slither");
+    Animal puppy = new Animal(2, "Dog", "Spot", false);
+    Animal kitten = new Animal(7, "Cat", "Sam", false);
+    Animal snake = new Animal(15, "Reptile", "Slither", false);
 
     Animal[] allAnimals = {puppy, kitten, snake};
     System.out.println("What is the maximum age you would prefer for adoption");
@@ -21,7 +21,11 @@ public class App {
         System.out.println(individualAnimal.mAge);
         System.out.println(individualAnimal.mSpecies);
         System.out.println(individualAnimal.mName);
+      
       }
     }
+
+    boolean adopted = puppy.isAdopted();
+    System.out.println(adopted);
   }
 }
